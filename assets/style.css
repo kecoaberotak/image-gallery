@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+}
+
+.container {
+  width: fit-content;
+  margin: 10px auto;
+  display: grid;
+  border: 5px solid white;
+  gap: 5px;
+  overflow: auto;
+  background: white;
+}
+
+.image-selected {
+  display: flex;
+  justify-self: center;
+}
+
+.thumbnail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: white;
+}
+
+.thumbnail-image {
+  width: 200px;
+  border: 2px solid white;
+}
+
+.thumbnail-image:hover {
+  opacity: 70%;
+}
+
+.selected {
+  opacity: 70%;
+}
