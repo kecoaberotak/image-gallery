@@ -12,5 +12,13 @@ container.addEventListener('click', function(image){
     setTimeout(function(){
       imageSelected.classList.remove('fade');
     }, 500);
+
+    imageThumb.forEach(function(thum){
+      if(thum.classList.contains('selected')){
+        thum.classList.remove('selected');
+      }
+    });
+
+    image.target.classList.add('selected');
   }
 });
