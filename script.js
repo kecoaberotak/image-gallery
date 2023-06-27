@@ -2,9 +2,8 @@ const container = document.querySelector('.container');
 const imageSelected = container.querySelector('.image-selected');
 const imageThumb = container.querySelectorAll('.thumbnail-image');
 
-imageThumb.forEach(function(image){
-  image.addEventListener('click', function(e){
-    imageSelected.setAttribute('src', e.target.src);
-    console.log(e);
-  });
+container.addEventListener('click', function(image){
+  if(image.target.className === 'thumbnail-image'){
+    imageSelected.setAttribute('src', image.target.src);
+  }
 });
